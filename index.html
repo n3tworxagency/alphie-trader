@@ -68,20 +68,6 @@
             <p class="cta-micro">No credit card required &nbsp;·&nbsp; Limited spots available</p>
           </div>
 
-          <div class="trust-strip reveal delay-4">
-            <div class="trust-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              Seychelles FSA Regulated
-            </div>
-            <span class="trust-sep" aria-hidden="true"></span>
-            <div class="trust-item">
-              CMC Markets × SolnaCorp JV
-            </div>
-            <span class="trust-sep" aria-hidden="true"></span>
-            <div class="trust-item">
-              30-Day Money-Back Guarantee
-            </div>
-          </div>
         </div>
 
         <!-- Terminal -->
@@ -187,6 +173,34 @@
         <a href="#register" class="btn btn-cyan btn-sm">Secure Your Spot</a>
       </div>
     </div>
+
+    <!-- COUNTDOWN: inline script — runs the instant the spans above exist -->
+    <script>
+    (function() {
+      var LOOP_MS  = 5 * 60 * 60 * 1000;
+      var deadline = Date.now() + LOOP_MS;
+
+      function pad(n) {
+        return String(Math.max(0, Math.floor(n))).padStart(2, '0');
+      }
+
+      function tick() {
+        var remaining = deadline - Date.now();
+        if (remaining <= 0) {
+          deadline = Date.now() + LOOP_MS;
+          remaining = LOOP_MS;
+        }
+        var s = remaining / 1000;
+        document.getElementById('cd-days').textContent  = pad(s / 86400);
+        document.getElementById('cd-hours').textContent = pad((s % 86400) / 3600);
+        document.getElementById('cd-mins').textContent  = pad((s % 3600)  / 60);
+        document.getElementById('cd-secs').textContent  = pad(s % 60);
+      }
+
+      tick();
+      setInterval(tick, 1000);
+    })();
+    </script>
 
     <!-- 5 USPs -->
     <section class="usps" id="features">
@@ -498,7 +512,7 @@
         <div class="g-copy reveal">
           <h2>Yes, there's a guarantee.</h2>
           <p>While we can't guarantee specific trading results, we can guarantee the value of your early access membership. If the platform doesn't completely exceed your expectations, contact us within the first 30 days for a full refund — no questions asked.</p>
-          <a href="/cdn-cgi/l/email-protection#5e2d2b2e2e312c2a1e3f322e36373b2a2c3f3a3b2c703d3133" class="btn btn-outline-indigo"><span class="__cf_email__" data-cfemail="73000603031c010733121f031b1a160701121716015d101c1e">[email&#160;protected]</span></a>
+          <a href="mailto:support@alphietrader.com" class="btn btn-outline-indigo">support@alphietrader.com</a>
         </div>
       </div>
     </section>
@@ -562,8 +576,30 @@
           <img src="logo-white.png" alt="alphie trader" class="footer-logo" width="110" height="57" />
           <p>A hedge fund in your pocket.</p>
         </div>
+        <div class="social-links" aria-label="Social media">
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/people/alphie-trader/61585912577670/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95C18.05 21.45 22 17.19 22 12z"/></svg>
+          </a>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/alphietrader/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+          <!-- TikTok -->
+          <a href="https://www.tiktok.com/@alphietrader" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
+          </a>
+          <!-- X (Twitter) -->
+          <a href="https://x.com/alphietrader" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <!-- Threads -->
+          <a href="https://www.threads.com/@alphietrader" target="_blank" rel="noopener noreferrer" aria-label="Threads">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.028-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.583-1.301-.88-2.344-.887h-.046c-.847 0-1.802.208-2.543 1.492l-1.792-1.02c.918-1.683 2.386-2.572 4.358-2.572h.063c3.016.018 4.813 1.842 5.115 5.037.236.067.466.137.69.21 2.172.693 3.472 2.097 3.863 4.123.428 2.188-.132 4.838-2.254 6.918C17.029 23.159 14.938 24 12.186 24zm.024-9.69c-.06 0-.12.002-.181.006-1.01.057-1.862.35-2.41.824-.484.418-.706.967-.674 1.63.07 1.262 1.176 2.019 2.98 1.922 1.217-.066 2.124-.548 2.695-1.434.527-.82.778-1.98.748-3.447a11.651 11.651 0 0 0-3.158-.501z"/></svg>
+          </a>
+        </div>
         <div class="footer-links">
-          <a href="/cdn-cgi/l/email-protection#40333530302f323400212c302829253432212425326e232f2d"><span class="__cf_email__" data-cfemail="2b585e5b5b44595f6b4a475b43424e5f594a4f4e5905484446">[email&#160;protected]</span></a>
+          <a href="mailto:support@alphietrader.com">support@alphietrader.com</a>
           <a href="#">Privacy Policy</a>
           <a href="#">Terms &amp; Conditions</a>
           <a href="#">Disclaimer</a>

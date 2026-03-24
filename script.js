@@ -140,56 +140,7 @@ document.addEventListener('click', e => {
 })();
 
 /* ================================================================
-   6. COUNTDOWN TIMER
-   No sessionStorage — deadline is always calculated fresh from page
-   load so it works in all environments (iframes, incognito, strict
-   privacy, hosted preview tools, etc.)
-================================================================ */
-(function () {
-  try {
-    const elDays  = qs('#cd-days');
-    const elHours = qs('#cd-hours');
-    const elMins  = qs('#cd-mins');
-    const elSecs  = qs('#cd-secs');
-    if (!elDays || !elHours || !elMins || !elSecs) return;
-
-    // Always count 5 days from right now — simple, reliable, no storage needed
-    const DEADLINE = Date.now() + 5 * 24 * 60 * 60 * 1000;
-
-    const pad = n => String(Math.max(0, Math.floor(n))).padStart(2, '0');
-
-    const tick = () => {
-      const remaining = DEADLINE - Date.now();
-
-      if (remaining <= 0) {
-        elDays.textContent = elHours.textContent = elMins.textContent = elSecs.textContent = '00';
-        clearInterval(iv);
-        return;
-      }
-
-      const totalSecs  = remaining / 1000;
-      const d = Math.floor(totalSecs / 86400);
-      const h = Math.floor((totalSecs % 86400) / 3600);
-      const m = Math.floor((totalSecs % 3600)  / 60);
-      const s = Math.floor(totalSecs % 60);
-
-      elDays.textContent  = pad(d);
-      elHours.textContent = pad(h);
-      elMins.textContent  = pad(m);
-      elSecs.textContent  = pad(s);
-    };
-
-    // Run immediately so numbers appear before the first second elapses
-    tick();
-    const iv = setInterval(tick, 1000);
-
-  } catch (err) {
-    // Fail silently — countdown is cosmetic, never break the page
-    console.warn('Countdown error:', err);
-  }
-})();
-
-/* ================================================================
+   7.===============================================================
    7. FORM VALIDATION + SUBMISSION
 ================================================================ */
 (function () {

@@ -1061,6 +1061,10 @@ input { font-family: inherit; }
 .footer-links a:hover { color: var(--indigo); }
 .footer-legal { border-top: 1px solid var(--border); padding-top: 24px; display: flex; flex-direction: column; gap: 6px; }
 .footer-legal p { font-size: 12px; color: var(--text-3); line-height: 1.7; }
+.social-links { display: flex; flex-direction: row; gap: 16px; align-items: center; }
+.social-links a { color: var(--text-2); transition: color 0.2s; display: flex; }
+.social-links a svg { width: 20px; height: 20px; }
+.social-links a:hover { color: var(--indigo); }
 
 /* ================================================================
    RESPONSIVE
