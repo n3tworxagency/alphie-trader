@@ -1451,10 +1451,102 @@ footer .logotype img {
 
   /* Register section image mobile */
   .register-section-img {
+    width: 100%;
     max-width: 100%;
-    border-radius: 10px;
+    border-radius: 0;
+    display: block;
   }
   .register-img-wrap {
-    margin-bottom: 28px;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+
+  /* Fix 1: Mid-page CTA card — centre button on mobile */
+  .usp-cta-card {
+    align-items: center;
+    text-align: center;
+  }
+  .usp-cta-card .btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Fix 3: Feature list cards — full-width on mobile */
+  .usp-card {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+  .usp-list {
+    text-align: left;
+  }
+
+  /* Fix 4: Global mobile button centering */
+  .btn,
+  a[class*="btn"],
+  button[class*="btn"] {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  /* Fix 5: Additional heading/eyebrow centering */
+  h1, h2, h3, h4,
+  [class*="section-title"],
+  [class*="section-desc"],
+  [class*="hero-sub"],
+  [class*="eyebrow"],
+  [class*="label"] {
+    text-align: center;
+  }
+  [class*="badge"],
+  [class*="tag"] {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    display: flex;
+    width: fit-content;
+  }
+
+  /* Fix 6: Footer centering on mobile */
+  .footer-top {
+    align-items: center;
+  }
+  .footer-brand {
+    align-items: center;
+    text-align: center;
+  }
+  .footer-brand img,
+  .footer-logo {
+    margin-left: auto;
+    margin-right: auto;
+    object-position: center center;
+  }
+  .footer-links {
+    justify-content: center;
+    text-align: center;
+  }
+  .footer-links a {
+    text-align: center;
+  }
+  .social-links {
+    justify-content: center;
+  }
+  .footer-legal {
+    text-align: center;
   }
 }
