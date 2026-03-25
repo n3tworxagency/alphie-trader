@@ -36,7 +36,7 @@
   --font:        'Nunito', sans-serif;
 
   /* Spacing / sizing */
-  --header-h:    68px;
+  --header-h:    110px;
   --section-gap: 48px;
   --radius:      14px;
   --radius-sm:   9px;
@@ -232,7 +232,7 @@ input { font-family: inherit; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  height: var(--header-h);
+  min-height: var(--header-h);
   background: transparent;
   border-bottom: 1px solid transparent;
   transition: background 0.4s ease, border-color 0.4s ease;
@@ -250,7 +250,7 @@ input { font-family: inherit; }
   justify-content: space-between;
   gap: 24px;
 }
-.logo-img { height: 56px; width: auto; display: block; }
+.logo-img { width: auto; display: block; }
 
 .header-nav {
   display: flex;
@@ -1039,7 +1039,7 @@ input { font-family: inherit; }
 .footer-inner { display: flex; flex-direction: column; gap: 28px; }
 .footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px; }
 .footer-brand { display: flex; flex-direction: column; gap: 8px; }
-.footer-logo { height: 48px; width: auto; display: block; object-fit: contain; object-position: left center; }
+.footer-logo { height: 100px; width: auto; display: block; object-fit: contain; object-position: left center; }
 .footer-brand p { font-size: 13px; color: var(--text-3); }
 .footer-links { display: flex; flex-wrap: wrap; gap: 20px; }
 .footer-links a { font-size: 14px; color: var(--text-2); transition: color 0.2s; }
@@ -1317,6 +1317,11 @@ input { font-family: inherit; }
   }
   .ea-perk {
     text-align: left;
+    align-items: flex-start;
+  }
+  .ea-perk p,
+  .ea-perk strong {
+    text-align: left;
   }
 }
 
@@ -1340,13 +1345,103 @@ input { font-family: inherit; }
 }
 
 /* ================================================================
+   FOOTER LAYOUT (DESKTOP)
+   Row 1: .footer-top — three columns side by side, top-aligned
+   Row 2: .footer-legal — full-width disclaimer below
+================================================================ */
+
+/* Outer wrapper: column stack (top row + disclaimer below) */
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Three-column row */
+.footer-top {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  width: 100%;
+  padding-bottom: 24px;
+}
+
+/* Left column: brand + social icons */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  align-self: flex-start;
+  margin-top: 0;
+  padding-top: 0;
+  gap: 12px;
+}
+
+.footer-brand .social-links {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-top: 4px;
+  justify-content: flex-start;
+  align-self: unset;
+  flex: unset;
+  padding-top: 0;
+}
+
+.footer-brand img,
+.footer-logo,
+footer a.logotype img {
+  margin-top: 0;
+  padding-top: 0;
+  display: block;
+}
+
+.footer-brand p {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Right column: links stacked vertically */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex: 1;
+  align-self: flex-start;
+  margin-top: 0;
+  padding-top: 0;
+  flex-wrap: nowrap;
+}
+
+.footer-links a {
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Row 2: full-width disclaimer */
+.footer-legal {
+  width: 100%;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-self: unset;
+}
+
+/* ================================================================
    FOOTER BRAND LOGO SIZING
 ================================================================ */
 .footer-brand img,
 footer .logotype img {
-  height: 48px;
+  height: 100px;
   width: auto;
-  max-width: 200px;
+  max-width: none;
   object-fit: contain;
   object-position: left center;
   display: block;
@@ -1548,5 +1643,285 @@ footer .logotype img {
   }
   .footer-legal {
     text-align: center;
+  }
+
+  /* Fix 2: Feature cards — override broad centre rule, left-align all content */
+  .usp-card h3,
+  .usp-card > p,
+  .usp-headline-line,
+  .usp-list li {
+    text-align: left;
+  }
+
+  /* Fix 3: Stat blocks inside feature cards — left-align label */
+  .usp-stat-block {
+    text-align: left;
+  }
+  .usp-big-label {
+    text-align: left;
+  }
+
+  /* Fix 4: Mid-page CTA card — constrain paragraph width */
+  .usp-cta-card p {
+    max-width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Fix 5: "Why Register Now" step number cards */
+  .reason-n {
+    text-align: center;
+    width: 100%;
+  }
+  .reason {
+    text-align: center;
+  }
+
+  /* Fix 6: Register section — balance text, centre checklist block, centre regions */
+  .reg-body {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .reg-perks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .reg-perks li {
+    text-align: left;
+  }
+  .region-tags {
+    justify-content: center;
+  }
+  .rl {
+    text-align: center;
+  }
+
+  /* Fix 7: "Registration Open" badge — centre in form card */
+  .form-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .form-live-badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Fix 8: Testimonial stars */
+  .testi-stars {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .testi-card {
+    text-align: center;
+  }
+
+  /* Fix 9: FAQ answers — left-align (overrides broad centre rule) */
+  .faq-body p {
+    text-align: left;
+  }
+  .faq-item summary {
+    text-align: left;
+  }
+
+  /* Fix 11: Final CTA section — padding and text balance */
+  .final-cta {
+    padding-top: 40px;
+  }
+  .final-cta p:not(.final-micro) {
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Fix 12: Footer links — wrap naturally, email on own row */
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 16px;
+  }
+  .footer-links a {
+    white-space: nowrap;
+  }
+  footer a[href^="mailto"] {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  /* Fix 1: Mobile footer links — centred */
+  .footer-links,
+  [class*="footer-links"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100%;
+    flex: unset;
+  }
+  .footer-links a {
+    text-align: center !important;
+    width: 100%;
+    display: block;
+    white-space: normal;
+  }
+  footer a[href^="mailto"] {
+    text-align: center !important;
+    display: block;
+    width: 100%;
+    margin-bottom: 4px;
+  }
+
+  /* Fix 4: Mobile footer disclaimer — left-aligned, smaller text */
+  .footer-legal,
+  .footer-legal p {
+    text-align: left !important;
+    font-size: 11px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.35);
+  }
+  .footer-legal {
+    padding: 16px 0 0 0;
+    margin-top: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    width: 100%;
+    display: block;
+  }
+
+  /* Fix 2: Mobile footer — centre logo, tagline, and social icons */
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .footer-brand img,
+  .footer-logo {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .footer-brand p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+  }
+  .footer-brand .social-links {
+    justify-content: center !important;
+    display: flex;
+    width: 100%;
+  }
+
+  /* Mobile logo — 30px, nav height 54px */
+  :root { --header-h: 54px; }
+  a.logotype,
+  a[class*="logo"],
+  .logo-link,
+  [class*="nav-brand"] {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  .nav-row,
+  [class*="nav-row"],
+  [class*="navbar"],
+  .header-inner,
+  header {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    min-height: auto !important;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Fix 2: Mobile hero — increase padding-top so eyebrow clears the nav */
+  #hero,
+  .hero {
+    padding-top: 120px;
+  }
+
+  /* Fix 3: Nav CTA button — ensure white text on mobile */
+  nav a[class*="btn"],
+  header a[class*="btn"],
+  .mobile-nav a[class*="btn"],
+  #mobile-nav a[class*="btn"] {
+    color: #ffffff !important;
+  }
+}
+
+/* ================================================================
+   LOGO SIZING — ALL BREAKPOINTS (100px)
+================================================================ */
+nav img,
+header img,
+.nav-logo img,
+[class*="navbar"] img,
+[class*="header-logo"] img,
+[class*="nav-brand"] img,
+a.logotype img {
+  height: 100px !important;
+  width: auto !important;
+  max-width: none !important;
+  min-height: 100px !important;
+  display: block;
+}
+
+footer img,
+[class*="footer"] img,
+[class*="foot-brand"] img,
+[class*="footer-logo"] img,
+.footer-logo {
+  height: 100px !important;
+  width: auto !important;
+  max-width: none !important;
+  display: block;
+}
+
+/* ================================================================
+   LOGO-IMG — clean desktop size
+================================================================ */
+.logo-img {
+  height: 100px;
+  width: auto;
+  display: block;
+}
+.logo-img-mobile {
+  display: none;
+}
+
+/* ================================================================
+   LOGO-IMG — mobile override (MUST be last rule in file)
+================================================================ */
+@media (max-width: 767px) {
+  .logo-img:not(.logo-img-mobile) {
+    display: none !important;
+  }
+
+  .logo-img-mobile {
+    display: block !important;
+    height: 44px !important;
+    width: auto !important;
+    max-height: 44px !important;
+    min-height: 0 !important;
   }
 }
