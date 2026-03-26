@@ -1247,6 +1247,9 @@ input { font-family: inherit; }
   line-height: 1.15;
   margin-bottom: 18px;
   color: #fff;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .ea-highlight {
@@ -1857,7 +1860,7 @@ footer .logotype img {
   /* Fix 2: Mobile hero — increase padding-top so eyebrow clears the nav */
   #hero,
   .hero {
-    padding-top: 120px;
+    padding-top: 90px;
   }
 
   /* Fix 3: Nav CTA button — ensure white text on mobile */
@@ -1889,19 +1892,20 @@ a.logotype img {
 footer img,
 [class*="footer"] img,
 [class*="foot-brand"] img,
-[class*="footer-logo"] img,
-.footer-logo {
-  height: 100px !important;
-  width: auto !important;
-  max-width: none !important;
+footer a.logotype img,
+footer .logo-img {
+  height: 44px;
+  width: auto;
   display: block;
+  object-fit: contain;
 }
 
 /* ================================================================
    LOGO-IMG — clean desktop size
 ================================================================ */
 .logo-img {
-  height: 100px;
+  height: 52px !important;
+  min-height: 0 !important;
   width: auto;
   display: block;
 }
@@ -1924,4 +1928,248 @@ footer img,
     max-height: 44px !important;
     min-height: 0 !important;
   }
+
+  .logo-img {
+    height: 44px !important;
+    width: auto !important;
+    max-height: 44px !important;
+    min-height: 0 !important;
+  }
+}
+
+/* ================================================================
+   EA-PERKS-5 — 5-card grid (3 col desktop, 2 col tablet, 1 col mobile)
+================================================================ */
+.ea-perks-5 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .ea-perks-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .ea-perks-5 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================================================================
+   PHONE FRAME
+================================================================ */
+.phone-frame-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-frame {
+  width: 320px;
+  background: #0a0a12;
+  border-radius: 40px;
+  border: 8px solid #1a1a2e;
+  box-shadow: 0 0 0 2px #2a2a4e,
+              0 32px 80px rgba(100, 80, 220, 0.25),
+              0 8px 32px rgba(0,0,0,0.6);
+  padding: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.phone-frame::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 6px;
+  background: #1a1a2e;
+  border-radius: 3px;
+  z-index: 10;
+}
+
+.phone-screen {
+  border-radius: 28px;
+  overflow: hidden;
+  background: #0d0d1a;
+}
+
+.phone-screen [class*="terminal"],
+.phone-screen [class*="app-mockup"],
+.phone-screen [class*="dashboard"] {
+  width: 100%;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .phone-frame {
+    width: 280px;
+  }
+}
+
+@media (max-width: 767px) {
+  .phone-frame {
+    width: 240px;
+  }
+  .phone-frame-wrap {
+    margin-bottom: 32px;
+  }
+}
+
+/* ================================================================
+   HERO PHONE MOCKUP IMAGE
+================================================================ */
+.hero-phone-wrap {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  visibility: visible !important;
+  opacity: 1;
+}
+
+.hero-phone-img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  display: block !important;
+  visibility: visible !important;
+  filter: drop-shadow(0 24px 64px rgba(100, 80, 220, 0.2));
+}
+
+@media (max-width: 900px) {
+  .hero-phone-img {
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-phone-img {
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ================================================================
+   NAV TOP / BOTTOM PADDING
+================================================================ */
+#nav,
+header,
+[class*="navbar"],
+[class*="nav-wrapper"] {
+  padding-top: 10px;
+  padding-bottom: 4px;
+}
+
+/* ================================================================
+   EA-HEADING MAX-WIDTH (mobile)
+================================================================ */
+@media (max-width: 767px) {
+  .ea-heading {
+    max-width: 100%;
+    font-size: clamp(26px, 6vw, 38px);
+  }
+}
+
+@media (max-width: 767px) {
+  #nav,
+  header,
+  [class*="navbar"] {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+/* ================================================================
+   FIX 2 — MOBILE HERO: ensure phone wrap and chart visible
+================================================================ */
+@media (max-width: 767px) {
+  .hero-phone-wrap,
+  [class*="hero-right"],
+  [class*="hero-visual"],
+  [class*="hero-mockup"],
+  [class*="terminal-wrap"],
+  [class*="app-mockup"] {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100%;
+    justify-content: center;
+    margin-top: 24px;
+  }
+
+  .hero-phone-img,
+  [class*="terminal"],
+  [class*="app-mockup"] > * {
+    max-width: 90vw !important;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  #hero .wrap,
+  [class*="hero-inner"],
+  [class*="hero-grid"],
+  [class*="hero-content"] {
+    grid-template-columns: 1fr !important;
+    display: grid;
+  }
+}
+
+/* ================================================================
+   FIX 3 — MOBILE: reduce gap between checklist and GHL form
+================================================================ */
+@media (max-width: 767px) {
+  [class*="checklist"],
+  [class*="check-list"],
+  [class*="feature-list"],
+  [class*="benefits-list"] {
+    margin-bottom: 16px !important;
+    padding-bottom: 0 !important;
+  }
+
+  [class*="ghl-form"],
+  [class*="form-wrap"],
+  [class*="register-form"],
+  .ghl-form-wrap {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  [class*="register-section"],
+  [class*="early-access-form"],
+  [class*="registration-section"] {
+    gap: 16px !important;
+  }
+
+  [class*="checklist"] li,
+  [class*="check-list"] li,
+  [class*="feature-list"] li {
+    margin-bottom: 8px !important;
+  }
+}
+
+/* ================================================================
+   NAV HEIGHT OVERRIDE — force slim nav, kills 110px min-height
+================================================================ */
+header,
+#nav,
+nav,
+[class*="navbar"] {
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+  min-height: unset !important;
+  margin-bottom: 0 !important;
 }

@@ -17,7 +17,7 @@
     <div class="header-inner container">
       <a href="#" class="logo-link" aria-label="Alphie Trader Home">
         <img src="logo-white.png" alt="alphie trader" class="logo-img" />
-        <img src="asset/alphie-logo-icon.png" alt="Alphie Trader" class="logo-img logo-img-mobile" />
+        <img src="logo-white.png" alt="Alphie Trader" class="logo-img logo-img-mobile" />
       </a>
       <nav class="header-nav" aria-label="Main navigation">
         <a href="#features">Platform</a>
@@ -71,15 +71,16 @@
 
         </div>
 
-        <div class="phone-mockup-wrap">
+        <!-- RIGHT COLUMN: phone mockup image -->
+        <div class="hero-phone-wrap fi" style="transition-delay:.15s">
           <img
             src="asset/phone-alphie.png"
-            alt="Alphie Trader mobile app"
-            class="phone-mockup-img"
+            alt="Alphie Trader app"
+            class="hero-phone-img"
           />
         </div>
 
-        <!-- Terminal -->
+        <!-- Terminal full-width (desktop only) -->
         <div class="hero-visual reveal delay-2" aria-hidden="true">
           <div class="terminal">
             <div class="terminal-bar">
@@ -103,8 +104,8 @@
                 <circle cx="320" cy="8" r="9" fill="#7DE5F3" opacity="0.25" class="pulse-dot"/>
               </svg>
               <div class="chart-info">
-                <div class="chart-pair">BTC/USD <span class="up">+3.42%</span></div>
-                <div class="chart-price">$67,204.50</div>
+                <div class="chart-pair">EUR/USD <span class="up">+0.18%</span></div>
+                <div class="chart-price">1.0847</div>
               </div>
             </div>
             <div class="terminal-rows">
@@ -137,46 +138,6 @@
 
       </div>
 
-    </section>
-
-    <!-- EARLY ACCESS -->
-    <section id="early-access" aria-label="Early access bonus">
-      <div class="wrap">
-        <div class="ea-inner fi">
-          <div class="ea-badge">Early Registration Exclusive</div>
-          <h2 class="ea-heading">Get a <span class="ea-highlight">$100 Trading Credit</span><br />Just for Signing Up Early</h2>
-          <p class="ea-desc">Every trader who registers before launch receives a $100 trading credit applied directly to their account on their first deposit. This is our way of rewarding the people who believed in Alphie Trader from day one - and it will not be offered once we go live to the public.</p>
-          <div class="ea-perks">
-            <div class="ea-perk">
-              <div class="ea-icon">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2l2.4 4.8 5.3.8-3.8 3.7.9 5.2L10 14l-4.8 2.5.9-5.2L2.3 7.6l5.3-.8L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-              </div>
-              <div>
-                <strong>$100 First Deposit Bonus</strong>
-                <p>A $100 trading credit applied to your account the moment you make your first deposit. Real money, ready to trade.</p>
-              </div>
-            </div>
-            <div class="ea-perk">
-              <div class="ea-icon">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M10 6.5v3.5l2.5 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-              </div>
-              <div>
-                <strong>Priority Platform Access</strong>
-                <p>Early registrants skip the waitlist and are first through the door when Alphie Trader launches.</p>
-              </div>
-            </div>
-            <div class="ea-perk">
-              <div class="ea-icon">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10a7 7 0 1 0 14 0A7 7 0 0 0 3 10zM10 6v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-              </div>
-              <div>
-                <strong>Founding Member Status</strong>
-                <p>Locked-in benefits and a permanent Founding Member badge that sets you apart on the platform - for life.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- COUNTDOWN -->
@@ -226,142 +187,114 @@
     })();
     </script>
 
-    <!-- 5 USPs -->
-    <section class="usps" id="features">
-      <div class="container">
+    <!-- REGISTRATION FORM -->
+    <section class="register" id="register">
+      <div class="register-glow" aria-hidden="true"></div>
+      <div class="container register-grid">
 
-        <div class="section-label reveal">FIVE FEATURES. ONE PLATFORM.</div>
-        <h2 class="section-h2 reveal delay-1">
-          Five features no broker<br /><em>has combined.</em>
-        </h2>
-        <div class="usps-grid">
-
-          <article class="usp-card reveal">
-            <div class="usp-head">
-              <span class="usp-num">01</span>
-              <div class="usp-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
-              </div>
-            </div>
-            <div class="usp-stat-block">
-              <span class="usp-big-num">45%</span>
-              <span class="usp-big-label">of global social trading volume - the #1 fastest-growing segment</span>
-            </div>
-            <h3>Copy Trading</h3>
-            <p class="usp-headline-line">Mirror Expert Traders in Real Time.</p>
-            <p>Copy expert traders and fund strategies as they trade. Pro-rata position sizing, configurable caps, and full reverse copy - powered by an in-house algorithm. Institutional-grade automation accessible to every account level.</p>
-            <ul class="usp-list">
-              <li>Real-time copy execution</li>
-              <li>Fund &amp; trader copying</li>
-              <li>Reverse copy available</li>
-              <li>Pro-rata position sizing</li>
-            </ul>
-          </article>
-
-          <article class="usp-card reveal delay-1">
-            <div class="usp-head">
-              <span class="usp-num">02</span>
-              <div class="usp-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-              </div>
-            </div>
-            <div class="usp-stat-block">
-              <span class="usp-big-num">$120T</span>
-              <span class="usp-big-label">in global retail assets - fewer than 5% have hedge fund access</span>
-            </div>
-            <h3>Hedge Fund Offerings</h3>
-            <p class="usp-headline-line">Institutional Strategies From $50.</p>
-            <p>Alphie delivers institutional-grade hedge fund strategies from a $50 deposit - democratising access that has always been gated by wealth. Diverse strategies tailored to every investor profile, from beginner to HNW.</p>
-            <ul class="usp-list">
-              <li>Hedge fund strategies</li>
-              <li>From $50 minimum</li>
-              <li>Diverse strategy offerings</li>
-              <li>Institutional-grade access</li>
-            </ul>
-          </article>
-
-          <article class="usp-card reveal delay-2">
-            <div class="usp-head">
-              <span class="usp-num">03</span>
-              <div class="usp-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              </div>
-            </div>
-            <div class="usp-stat-block">
-              <span class="usp-big-num">70%</span>
-              <span class="usp-big-label">of retail investors used peer insights to inform trades in 2024</span>
-            </div>
-            <h3>Social Trading</h3>
-            <p class="usp-headline-line">A Live Feed of Trades, Ideas &amp; Analysis.</p>
-            <p>A real-time community of trades, ideas, and market analysis. Alphie's social layer turns a trading platform into a living ecosystem where knowledge compounds. Equity-tiered groups keep the signal-to-noise ratio high.</p>
-            <ul class="usp-list">
-              <li>Live trade &amp; idea feed</li>
-              <li>Equity-tiered communities</li>
-              <li>Position sharing</li>
-              <li>Peer-driven insights</li>
-            </ul>
-          </article>
-
-          <article class="usp-card reveal">
-            <div class="usp-head">
-              <span class="usp-num">04</span>
-              <div class="usp-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-              </div>
-            </div>
-            <div class="usp-stat-block">
-              <span class="usp-big-num">$700B</span>
-              <span class="usp-big-label">in HNW wealth migrating to WealthTech platforms globally</span>
-            </div>
-            <h3>Portfolio Curating</h3>
-            <p class="usp-headline-line">Build, Share &amp; Follow Curated Portfolios.</p>
-            <p>Build and share curated portfolios across asset classes. Follow the investment thesis of traders you trust. Bridges social influence and serious investment discipline with full cross-asset visibility.</p>
-            <ul class="usp-list">
-              <li>Multi-asset portfolios</li>
-              <li>Share your thesis</li>
-              <li>Follow curated strategies</li>
-              <li>Cross-asset visibility</li>
-            </ul>
-          </article>
-
-          <article class="usp-card reveal delay-1">
-            <div class="usp-head">
-              <span class="usp-num">05</span>
-              <div class="usp-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
-              </div>
-            </div>
-            <div class="usp-stat-block">
-              <span class="usp-big-num">$12.1T</span>
-              <span class="usp-big-label">Global forex market daily trading volume <em style="font-style:normal;font-size:10px;display:block;margin-top:2px;"></em></span>
-            </div>
-            <h3>Manager Filtering</h3>
-            <p class="usp-headline-line">Institutional Due Diligence For Everyone.</p>
-            <p>Screen and rank trading managers by return, drawdown, and risk profile. Filter by strategy, asset class, and time horizon. Institutional-quality due diligence - accessible to every retail investor.</p>
-            <ul class="usp-list">
-              <li>Return &amp; drawdown filters</li>
-              <li>Risk profile screening</li>
-              <li>Strategy-based ranking</li>
-              <li>Transparent manager data</li>
-            </ul>
-          </article>
-
-          <!-- CTA card -->
-          <div class="usp-cta-card reveal delay-2">
-            <img src="logo-white.png" alt="alphie trader" style="height:100px;width:auto;display:block;" />
-            <p class="usp-cta-tag">A hedge fund in your pocket.</p>
-            <p>Be among the first to access all five features when we launch in 2026.</p>
-            <a href="#register" class="btn btn-primary btn-lg">Register Now</a>
-          </div>
-
+        <div class="reg-left">
+          <div class="section-label reveal">SECURE YOUR SPOT</div>
+          <h2 class="section-h2 reveal delay-1">Register Your<br /><em>Early Access.</em></h2>
+          <p class="reg-body reveal delay-2">Don't miss your chance to be part of the new era of retail trading. Register now to lock in your spot, your bonuses, and your reduced fees.</p>
+          <ul class="reg-perks reveal delay-3">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Priority access on every launch phase</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Permanently reduced trading fees</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Hedge fund strategies from $50</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Beta features before public release</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Premium trading rooms from day one</li>
+          </ul>
         </div>
 
-        <div class="asset-tape reveal">
-          <div class="tape-track">
-            <span>Forex</span><span class="sep">·</span><span>Crypto CFDs</span><span class="sep">·</span><span>Commodities</span><span class="sep">·</span><span>Indices</span><span class="sep">·</span><span>Crypto Spot</span><span class="sep">·</span><span>Futures</span><span class="sep">·</span><span>Options</span><span class="sep">·</span><span>Forex</span><span class="sep">·</span><span>Crypto CFDs</span><span class="sep">·</span><span>Commodities</span><span class="sep">·</span><span>Indices</span><span class="sep">·</span><span>Crypto Spot</span><span class="sep">·</span><span>Futures</span><span class="sep">·</span><span>Options</span>
+        <div class="reg-right reveal delay-2">
+          <div class="form-card">
+            <div class="form-top">
+              <div class="form-live-badge"><span class="live-dot"></span>Registration Open</div>
+            </div>
+            <div class="ghl-form-wrap">
+              <iframe
+                src="https://links.n3tworx.io/widget/form/6fdJys1wkK0PH6xvARDf"
+                style="width:100%;border:none;overflow:hidden;"
+                scrolling="no"
+                id="6fdJys1wkK0PH6xvARDf"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-activation-type="alwaysActivated"
+                data-deactivation-type="neverDeactivate"
+                data-form-name="N3tworx Registration"
+                data-height="480"
+                data-layout-iframe-id="6fdJys1wkK0PH6xvARDf"
+                data-form-id="6fdJys1wkK0PH6xvARDf"
+                title="N3tworx Registration Form"
+              ></iframe>
+              <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+            </div>
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <!-- FOUNDING TRADER BENEFITS -->
+    <section id="early-access" aria-label="Early access bonus">
+      <div class="wrap">
+        <div class="ea-inner fi">
+          <div class="ea-badge">Founding Trader Benefits</div>
+          <h2 class="ea-heading">Register Now.<br />Lock In Benefits<br /><span class="ea-highlight">That Disappear at Launch.</span></h2>
+          <p class="ea-desc">Every Founding Trader receives a stack of permanent benefits tied to pre-registration only. Once we go live, these are gone.</p>
+          <div class="ea-perks ea-perks-5">
+
+            <div class="ea-perk">
+              <div class="ea-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2l2.4 4.8 5.3.8-3.8 3.7.9 5.2L10 14l-4.8 2.5.9-5.2L2.3 7.6l5.3-.8L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <strong>$100 First Deposit Bonus</strong>
+                <p>A $100 trading credit applied to your account on your first deposit.</p>
+              </div>
+            </div>
+
+            <div class="ea-perk">
+              <div class="ea-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2v4M10 14v4M4.22 4.22l2.83 2.83M12.95 12.95l2.83 2.83M2 10h4M14 10h4M4.22 15.78l2.83-2.83M12.95 7.05l2.83-2.83" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <strong>Priority App Access</strong>
+                <p>First in line when beta opens. No waitlist, no queue. Guaranteed access at every phase of the rollout before the public gets in.</p>
+              </div>
+            </div>
+
+            <div class="ea-perk">
+              <div class="ea-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM4 18c0-3.314 2.686-6 6-6s6 2.686 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M15 7l1.5 1.5L18 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <strong>Founding Trader Badge</strong>
+                <p>A permanent in-app badge marking your early-adopter status. Once social trading goes live, this becomes a credibility signal in the community.</p>
+              </div>
+            </div>
+
+            <div class="ea-perk">
+              <div class="ea-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 5h16M2 10h10M2 15h7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="15" cy="14" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M15 12v2l1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <strong>Feature Voting Rights</strong>
+                <p>Vote on product features before launch. Your input shapes the roadmap before the public ever sees the platform.</p>
+              </div>
+            </div>
+
+            <div class="ea-perk">
+              <div class="ea-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M17 3H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h5l2 3 2-3h5a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <strong>Closed Discord Access</strong>
+                <p>Invite-only channel with direct access to the Alphie team. Exclusive to Founding Trader status — the gate closes at launch.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
     </section>
 
@@ -420,54 +353,119 @@
       </div>
     </section>
 
-    <!-- REGISTRATION FORM -->
-    <section class="register" id="register">
-      <div class="register-glow" aria-hidden="true"></div>
-      <div class="container register-grid">
+    <!-- 5 USPs -->
+    <section class="usps" id="features">
+      <div class="container">
 
-        <div class="reg-left">
-          <div class="section-label reveal">SECURE YOUR SPOT</div>
-          <h2 class="section-h2 reveal delay-1">Register Your<br /><em>Early Access.</em></h2>
-          <p class="reg-body reveal delay-2">Don't miss your chance to be part of the new era of retail trading. Register now to lock in your spot, your bonuses, and your reduced fees.</p>
-          <ul class="reg-perks reveal delay-3">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Priority access on every launch phase</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Permanently reduced trading fees</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Hedge fund strategies from $50</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Beta features before public release</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Premium trading rooms from day one</li>
-          </ul>
-          <div class="reg-regions reveal delay-4">
-            <span class="rl">Launching in:</span>
-            <div class="region-tags">
-              <span>🇬🇧 UK</span><span>🇰🇷 Korea</span><span>🇸🇬 Singapore</span><span>🇨🇦 Canada</span><span>+ more</span>
+        <div class="section-label reveal">FIVE FEATURES. ONE PLATFORM.</div>
+        <h2 class="section-h2 reveal delay-1">
+          Five features no broker<br /><em>has combined.</em>
+        </h2>
+        <div class="usps-grid">
+
+          <article class="usp-card reveal">
+            <div class="usp-head">
+              <span class="usp-num">01</span>
+              <div class="usp-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+              </div>
             </div>
+            <h3>Copy Trading</h3>
+            <p class="usp-headline-line">Mirror Expert Traders in Real Time.</p>
+            <p>Copy expert traders and fund strategies as they trade. Pro-rata position sizing, configurable caps, and full reverse copy - powered by an in-house algorithm. Institutional-grade automation accessible to every account level.</p>
+            <ul class="usp-list">
+              <li>Real-time copy execution</li>
+              <li>Fund &amp; trader copying</li>
+              <li>Reverse copy available</li>
+              <li>Pro-rata position sizing</li>
+            </ul>
+          </article>
+
+          <article class="usp-card reveal delay-1">
+            <div class="usp-head">
+              <span class="usp-num">02</span>
+              <div class="usp-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+            </div>
+            <h3>Hedge Fund Offerings</h3>
+            <p class="usp-headline-line">Institutional Strategies From $50.</p>
+            <p>Alphie delivers institutional-grade hedge fund strategies from a $50 deposit - democratising access that has always been gated by wealth. Diverse strategies tailored to every investor profile, from beginner to HNW.</p>
+            <ul class="usp-list">
+              <li>Hedge fund strategies</li>
+              <li>From $50 minimum</li>
+              <li>Diverse strategy offerings</li>
+              <li>Institutional-grade access</li>
+            </ul>
+          </article>
+
+          <article class="usp-card reveal delay-2">
+            <div class="usp-head">
+              <span class="usp-num">03</span>
+              <div class="usp-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+            </div>
+            <h3>Social Trading</h3>
+            <p class="usp-headline-line">A Live Feed of Trades, Ideas &amp; Analysis.</p>
+            <p>A real-time community of trades, ideas, and market analysis. Alphie's social layer turns a trading platform into a living ecosystem where knowledge compounds. Equity-tiered groups keep the signal-to-noise ratio high.</p>
+            <ul class="usp-list">
+              <li>Live trade &amp; idea feed</li>
+              <li>Equity-tiered communities</li>
+              <li>Position sharing</li>
+              <li>Peer-driven insights</li>
+            </ul>
+          </article>
+
+          <article class="usp-card reveal">
+            <div class="usp-head">
+              <span class="usp-num">04</span>
+              <div class="usp-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              </div>
+            </div>
+            <h3>Portfolio Curating</h3>
+            <p class="usp-headline-line">Build, Share &amp; Follow Curated Portfolios.</p>
+            <p>Build and share curated portfolios across asset classes. Follow the investment thesis of traders you trust. Bridges social influence and serious investment discipline with full cross-asset visibility.</p>
+            <ul class="usp-list">
+              <li>Multi-asset portfolios</li>
+              <li>Share your thesis</li>
+              <li>Follow curated strategies</li>
+              <li>Cross-asset visibility</li>
+            </ul>
+          </article>
+
+          <article class="usp-card reveal delay-1">
+            <div class="usp-head">
+              <span class="usp-num">05</span>
+              <div class="usp-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+              </div>
+            </div>
+            <h3>Manager Filtering</h3>
+            <p class="usp-headline-line">Institutional Due Diligence For Everyone.</p>
+            <p>Screen and rank trading managers by return, drawdown, and risk profile. Filter by strategy, asset class, and time horizon. Institutional-quality due diligence - accessible to every retail investor.</p>
+            <ul class="usp-list">
+              <li>Return &amp; drawdown filters</li>
+              <li>Risk profile screening</li>
+              <li>Strategy-based ranking</li>
+              <li>Transparent manager data</li>
+            </ul>
+          </article>
+
+          <!-- CTA card -->
+          <div class="usp-cta-card reveal delay-2">
+            <img src="logo-white.png" alt="alphie trader" />
+            <p class="usp-cta-tag">A hedge fund in your pocket.</p>
+            <p>Be among the first to access all five features when we launch in 2026.</p>
+            <a href="#register" class="btn btn-primary btn-lg">Register Now</a>
           </div>
+
         </div>
 
-        <div class="reg-right reveal delay-2">
-          <div class="form-card">
-            <div class="form-top">
-              <div class="form-live-badge"><span class="live-dot"></span>Registration Open</div>
-              <p>Join 12,000+ traders already registered</p>
-            </div>
-            <div class="ghl-form-wrap">
-              <iframe
-                src="https://links.n3tworx.io/widget/form/6fdJys1wkK0PH6xvARDf"
-                style="width:100%;border:none;overflow:hidden;"
-                scrolling="no"
-                id="6fdJys1wkK0PH6xvARDf"
-                data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-activation-type="alwaysActivated"
-                data-deactivation-type="neverDeactivate"
-                data-form-name="N3tworx Registration"
-                data-height="480"
-                data-layout-iframe-id="6fdJys1wkK0PH6xvARDf"
-                data-form-id="6fdJys1wkK0PH6xvARDf"
-                title="N3tworx Registration Form"
-              ></iframe>
-              <script src="https://link.msgsndr.com/js/form_embed.js"></script>
-            </div>
+        <div class="asset-tape reveal">
+          <div class="tape-track">
+            <span>Forex</span><span class="sep">·</span><span>Crypto CFDs</span><span class="sep">·</span><span>Commodities</span><span class="sep">·</span><span>Indices</span><span class="sep">·</span><span>Crypto Spot</span><span class="sep">·</span><span>Futures</span><span class="sep">·</span><span>Options</span><span class="sep">·</span><span>Forex</span><span class="sep">·</span><span>Crypto CFDs</span><span class="sep">·</span><span>Commodities</span><span class="sep">·</span><span>Indices</span><span class="sep">·</span><span>Crypto Spot</span><span class="sep">·</span><span>Futures</span><span class="sep">·</span><span>Options</span>
           </div>
         </div>
 
@@ -561,7 +559,7 @@
     <div class="container footer-inner">
       <div class="footer-top">
         <div class="footer-brand">
-          <img src="logo-white.png" alt="alphie trader" class="footer-logo" style="height:100px;width:auto;display:block;object-fit:contain;object-position:left center;" />
+          <img src="logo-white.png" alt="alphie trader" class="footer-logo" />
           <p>A hedge fund in your pocket.</p>
           <div class="social-links" aria-label="Social media">
             <!-- Facebook -->
